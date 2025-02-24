@@ -1716,6 +1716,13 @@ func lastStreamMarker(streamInd *int, endInd int, line string) {
 
 }
 
+func min(n1, n2 int) int {
+	if n1 < n2 {
+		return n1
+	}
+	return n2
+}
+
 // Provide a PDF file buffer of sufficient size for parsing an object w/o stream.
 func buffer(c context.Context, rd io.Reader) (buf []byte, endInd int, streamInd int, streamOffset int64, err error) {
 	// process: # gen obj ... obj dict ... {stream ... data ... endstream} ... endobj
